@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/watch.css') }}">
+{% endblock %}
+{% block content %}
+<div class="circle">
+    <!-- SVG for distorted and dotted circles -->
+    <div class="circle-container">
+        <svg class="spinning-circles" viewBox="0 0 400 400">
+            <!-- Distorted Circles -->
+            <circle cx="200" cy="200" r="180" stroke="#ddd" fill="none" stroke-width="2"></circle>
+            <circle cx="200" cy="200" r="170" stroke="#ccc" fill="none" stroke-width="2"></circle>
+            <circle cx="200" cy="200" r="160" stroke="#bbb" fill="none" stroke-width="2"></circle>
+            <circle cx="200" cy="200" r="150" stroke="#aaa" fill="none" stroke-width="2"></circle>
+
+            <!-- Dotted Circle -->
+            <circle cx="200" cy="200" r="140" stroke="#999" fill="none" stroke-width="2" stroke-dasharray="5, 10"></circle>
+            <circle cx="200" cy="200" r="130" stroke="#777" fill="none" stroke-width="2" stroke-dasharray="5, 15"></circle>
+        </svg>
+    </div>
+
+    <div class="center-content">
+        <!-- These will change on scroll -->
+        <div class="content content-1 active">
+            <h1>Innovation 
+                wrapped around 
+                your finger</h1>
+        </div>
+        <div class="content content-2">
+            <h1>Communication and Alerts </h1>
+            <p>Instant alerts</p>
+        </div>
+        <div class="content content-3">
+            <h1>Biometric Authentication</h1>
+            <p>Fingerprint or pulse detection</p>
+        </div>
+    </div>
+</div>
+
+<div class="scroll-section">
+    <!-- The rest of your website -->
+    <h2>GO TO THE 3-D model</h2>
+    <a href="{{ url_for('model') }}" class="model-link">View 3D Model</a>
+</div>
+
+<div class="container">
+    <div class="content">
+        <h1>Women's Safety Band</h1>
+        <p>Your essential safety tool</p>
+        <div class="rating">
+            <span>⭐ 4.9</span>
+            <span> | 36 Ratings</span>
+        </div>
+        <div class="price">
+            <span>₹13110</span>
+            <span class="old-price">₹13800</span>
+            <span class="discount">5% off</span>
+        </div>
+        <div class="color-options">
+            <span class="color-dot" style="background-color: black;" onclick="changeImage(0)"></span>
+            <span class="color-dot" style="background-color: grey;" onclick="changeImage(1)"></span>
+            <span class="color-dot" style="background-color:  #d2cece;" onclick="changeImage(2)"></span>
+        </div>
+        <button class="buy-button">Buy Band Now</button>
+    </div>
+    <div class="band-image">
+        <img src="{{ url_for('static', filename='images/watch.png') }}" alt="Image description">
+    </div>
+</div>
+<header>
+    <h1><span class="highlight">Sculpted</span> for you</h1>
+</header>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="feature-item">
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/watch.png') }}" alt="Image description">
+        </div>
+        <div class="text-overlay">
+            <h2>Emergency SoS</h2>
+            <p>GPS tracking</p>
+        </div>
+    </div>
+    <div class="feature-item">
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/watch.png') }}" alt="Image description">
+        </div>
+        <div class="text-overlay">
+            <h2>Feather-light experience</h2>
+            <p>Weighs in grams</p>
+        </div>
+    </div>
+    <div class="feature-item">
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/watch.png') }}" alt="Image description">
+        </div>
+        <div class="text-overlay">
+            <h2>Energy Efficiency</h2>
+            <p>Rechargeable batteries</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='js/watch.js') }}"></script>
+{% endblock %}

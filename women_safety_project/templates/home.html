@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering Women's Safety</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Empowering Women's Safety</h1>
+        <p>Welcome to our central hub for women's safety resources. Explore our safety band, safety apps, and useful guides to stay safe and informed.</p>
+        <div class="buttons">
+            <a href="#" class="btn-primary">Explore Safety Resources</a>
+            <a href="#" class="btn-secondary">Learn More</a>
+        </div>
+    </section>
+
+    <div class="container" id="container">
+        <h1>Join the Waitlist for Exclusive Updates</h1>
+        <p>Be the first to know about our product launch and receive special offers.</p>
+        <a href="#" class="button">Sign Up Now</a>
+    </div>
+    <div class="lol" id="lol">
+        <p>         
+           o
+           o
+           o
+           o
+           ot
+           tg
+           gg
+           tgh
+           hhg
+           g
+        </p>
+    </div>
+
+    <div class="info1" id="info1">
+        <h1>Discover the Power of Our Products</h1>
+        <p>.........oooo.......</p>
+        <a href="#" class="button">product</a>
+    </div>
+    <div class="space space--small"></div>
+    <div class="cards">
+      <div class="card" data-index="0">
+        <div class="card__inner">
+          <div class="card__image-container">
+            <img
+              class="card__image"
+              <img src="{{ url_for('static', filename='images/image1.jpeg') }}" alt="Image description">
+             
+          </div>
+          <div class="card__content">
+            <h1 class="card__title">Learn Self-Defense Techniques</h1>
+            <p class="card__description">
+                Explore guides on basic self-defense moves and find classes available online or in your local area.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-index="0">
+        <div class="card__inner">
+          <div class="card__image-container">
+            <img
+              class="card__image"
+              <img src="{{ url_for('static', filename='images/image2.jpg') }}" alt="Image description">
+          
+          </div>
+          <div class="card__content">
+            <h1 class="card__title">Understand Your Legal Rights</h1>
+            <p class="card__description">
+                Get informed about women's rights in India, focusing on harassment, assault, and domestic violence laws.
+    
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-index="0">
+        <div class="card__inner">
+          <div class="card__image-container">
+            <img
+              class="card__image"
+              <img src="{{ url_for('static', filename='images/image3.jpg') }}" alt="Image description">
+             
+          </div>
+          <div class="card__content">
+            <h1 class="card__title">Know Emergency Steps</h1>
+            <p class="card__description">
+              Follow a step-by-step guide on what to do during an emergency situation, including using safety apps and contacting authorities.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-index="0">
+        <div class="card__inner">
+          <div class="card__image-container">
+            <img
+              class="card__image"
+              <img src="{{ url_for('static', filename='images/image4.jpg') }}" alt="Image description">
+
+          </div>
+          <div class="card__content">
+            <h1 class="card__title">Download Safety Guides</h1>
+            <p class="card__description">
+                Access PDFs with self-defense tips and legal information to stay informed and prepared.        </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <section class="testimonials-section">
+      <h2>Testimonials</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et turpis nec justo aliquet ultricies. Nullam nec libero eu lorem tincidunt malesuada.</p>
+      
+      <div class="testimonials">
+          <div class="testimonial-card">
+              <div class="testimonial-profile">
+                <img src="{{ url_for('static', filename='images/image5.jpeg') }}" alt="Image description">
+              </div>
+              <div class="testimonial-content">
+                  <h3>Sarah Smith</h3>
+                  <p>CEO, Women's Empowerment Organization</p>
+                  <p>"There's a MOMENT where you have to choose whether to be silent or stand up."</p>
+              </div>
+          </div>
+  
+          <div class="testimonial-card">
+              <div class="testimonial-profile">
+                <img src="{{ url_for('static', filename='images/image6.jpeg') }}" alt="Image description">
+              </div>
+              <div class="testimonial-content">
+                  <h3>Emily Johnson</h3>
+                  <p>Founder, Safe Haven Foundation</p>
+                  <p>"Woman's Empowerment means giving woman the tools, resources, and support they need to live their lives to the fullest and achieve their goals"</p>
+              </div>
+          </div>
+  
+          <div class="testimonial-card">
+              <div class="testimonial-profile">
+                <img src="{{ url_for('static', filename='images/image7.jpeg') }}" alt="Image description">
+              </div>
+              <div class="testimonial-content">
+                  <h3>NELSON MANDELA</h3>
+                  <p>Freedom Fighter, Women's Rights Advocate</p>
+                  <p>Freedom cannot be achieved unless the women have been emancipated from all forms of oppression</p>
+              </div>
+          </div>
+  
+          <div class="testimonial-card">
+              <div class="testimonial-profile">
+                <img src="{{ url_for('static', filename='images/image8.jpeg') }}" alt="Image description">
+              </div>
+              <div class="testimonial-content">
+                  <h3>Maria Rodriguez</h3>
+                  <p>Director, Women's Shelter Program</p>
+                  <p>The impact of creating safer spaces for women cannot be overstated. This platform is a beacon of hope for many in need.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+ 
+    <script src="script.js"></script>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,121 @@
+.contact-form-box {
+    background-color: #291910; /* Box background color */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px; /* Width of the box */
+    margin: 20px auto; /* Center the box */
+    color: white; /* Text color */
+}
+
+.contact-form-box label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-form-box input[type="text"],
+.contact-form-box input[type="email"],
+.contact-form-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.contact-form-box button.submit-btn {
+    background-color:  #ff6600; /* Button background color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form-box button.submit-btn:hover {
+    background-color:  #ff6600;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f; /* Dark background similar to the image */
+    color: white;
+}
+
+.info-item {
+    width: 30%;
+}
+
+.info-item i {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.info-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    margin: 5px 0;
+}
+
+.contact-info p {
+    color: #ccc; /* Light gray for better readability */
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+.social-media {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    font-size: 1.5em; /* Adjust the size of the text */
+    color: white; /* White color for text */
+    text-decoration: none; /* Remove underline */
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.social-media a i {
+    margin-right: 10px;
+}
+
+.social-media a .fa-facebook {
+    color: #3b5998; /* Facebook brand color */
+}
+
+.social-media a .fa-twitter {
+    color: #1da1f2; /* Twitter brand color */
+}
+
+.social-media a .fa-instagram {
+    color: #e4405f; /* Instagram brand color */
+}
+
+.social-media a:hover {
+    color: white; /* Text color stays white on hover */
+}
+
+.social-media a:hover i {
+    transform: scale(1.2); /* Make the icon slightly larger on hover */
+    transition: transform 0.3s ease;
+}

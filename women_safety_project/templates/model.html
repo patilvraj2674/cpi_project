@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section id="products">
+    <h2>Our Products</h2>
+    <p>Check out our latest safety device, represented by a 3D model below:</p>
+    <div id="container"></div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@womensafety.com</p>
+    <p>Phone: +1 (555) 123-4567</p>
+</section>
+{% endblock %}
+
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+<script>
+    var modelUrl = "{{ url_for('static', filename='models/okok.glb') }}";
+</script>
+<script src="{{ url_for('static', filename='js/band.js') }}"></script>
+{% endblock %}

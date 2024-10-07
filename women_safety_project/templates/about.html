@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+{% block content %}
+<br>
+<section class="about-section">
+    <h2>About Women's Safety</h2>
+    <p>Learn about the importance of safety for women and the measures we can take to create safer spaces.</p>
+
+    <div class="square-container">
+        <div class="left-sidebar">
+            <h2>Statistics</h2>
+            <ul>
+                <li><button onclick="showGraph('bar')">Crimes per 100,000 women (2022)</button></li>
+                <li><button onclick="showGraph('pie')">Types of crimes against women, 2022</button></li>
+                <li><button onclick="showGraph('line')">Crime rate trends 2018-2022.</button></li>
+            </ul>
+        </div>
+
+        <div class="right-content">
+            <canvas id="graphCanvas" width="400" height="400"></canvas>
+        </div>
+    </div>
+     <br>
+     <br>
+    <h3>Statistics</h3>
+    <br>
+    <p>According to a recent survey:</p><br>
+    <ul>
+        <li>60% of women have experienced harassment in public spaces.</li>
+        <li>75% of women feel unsafe walking alone at night.</li>
+        <li>40% of women reported workplace harassment.</li>
+    </ul>
+    <br>
+    <br>
+    <h3>Key Issues</h3>
+    <br>
+    <ul>
+        <li>Harassment in public spaces</li>
+        <li>Workplace safety</li>
+        <li>Online harassment</li>
+        <li>Gender-based violence</li>
+        <li>Access to legal support</li>
+    </ul>
+    <br>
+    <br>
+    <h3>How to Stay Safe</h3>
+    <br>
+    <p>Preventive measures for staying safe in different environments:</p><br>
+    <ul>
+        <li>Always be aware of your surroundings.</li>
+        <li>Trust your instincts; if something feels off, leave the area.</li>
+        <li>Use well-lit and populated routes.</li>
+        <li>Keep your phone charged and accessible.</li>
+        <li>Share your location with someone you trust when going out.</li>
+    </ul>
+    <br><br>
+    <h3>Supporting Women’s Rights</h3><br>
+    <p>Information on laws and legal support available for women in India:</p><br>
+    <ul>
+        <li>The Protection of Women from Domestic Violence Act, 2005</li>
+        <li>The Sexual Harassment of Women at Workplace Act, 2013</li>
+        <li>Support helplines and NGOs dedicated to women's rights.</li>
+    </ul>
+</section>
+<br>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='js/about.js') }}"></script>
+{% endblock %}
