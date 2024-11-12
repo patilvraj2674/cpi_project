@@ -7,16 +7,16 @@ const container = document.getElementById("container");
 
 // Change the block's background and text color on hover
 container.addEventListener("mouseenter", () => {
-  container.style.backgroundColor = "#d2cece"; // New background color on hover
-  container.querySelector("h1").style.color = "#000000"; // Change h1 font color
-  container.querySelector("p").style.color = "#000000"; // Change paragraph font color
+  container.style.backgroundColor = "#89cff0"; // New background color on hover
+  container.querySelector("h1").style.color = "#121212"; // Change h1 font color
+  container.querySelector("p").style.color = "#121212"; // Change paragraph font color
 });
 
 // Reset the background and text color when the mouse leaves
 container.addEventListener("mouseleave", () => {
-  container.style.backgroundColor = "#291910"; // Original background color
-  container.querySelector("h1").style.color = "#d2cece"; // Reset h1 font color
-  container.querySelector("p").style.color = "#d2cece"; // Reset paragraph font color
+  container.style.backgroundColor = "#1d3557"; // Original background color
+  container.querySelector("h1").style.color = "#121212"; // Reset h1 font color
+  container.querySelector("p").style.color = "#121212"; // Reset paragraph font color
 });
 
 // Assuming aat is defined somewhere in your code
