@@ -23,6 +23,7 @@ const totalSections = 3;
 const contents = document.querySelectorAll('.content');
 const scrollSection = document.querySelector('.scroll-section');
 let canScroll = true;
+let scrollCount = 0; // Track the number of scrolls
 
 function updateContent() {
     contents.forEach(content => content.classList.remove('active'));
@@ -33,23 +34,20 @@ window.addEventListener('wheel', (event) => {
     if (!canScroll) return;
     canScroll = false;
 
-    if (scrollSection.style.display === "block") return;
-
-    if (event.deltaY > 0) {
-        if (currentSection < totalSections) {
-            currentSection++;
-            updateContent();
-        } else {
-            setTimeout(() => {
-                scrollSection.style.display = 'block';
-                document.body.style.overflowY = 'scroll';
-            }, 1000);
-        }
-    } else {
-        if (currentSection > 1) {
+    if (scrollCount < 2) { // Custom scroll behavior for first 3 scrolls
+        if (event.deltaY > 0) {
+            if (currentSection < totalSections) {
+                currentSection++;
+                updateContent();
+            }
+            scrollCount++;
+        } else if (currentSection > 1) { // Allow reverse scroll within custom behavior
             currentSection--;
             updateContent();
         }
+    } else { // After 3 scrolls, enable normal scrolling and show the scroll section
+        scrollSection.style.display = 'block';
+        document.body.style.overflowY = 'scroll'; // Allow normal page scrolling
     }
 
     setTimeout(() => {
